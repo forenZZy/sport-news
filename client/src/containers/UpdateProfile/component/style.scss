@@ -1,0 +1,86 @@
+@import '../../../styles/variables.scss';
+
+.updateProfile {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  justify-content: center;
+
+  @media screen and (max-width: $mobile-width) {
+    width: 100%;
+    margin: 0;
+  }
+
+  .avatar {
+    width: 120px;
+    height: 120px;
+    vertical-align: middle;
+    background: url('../../../assets/img/user-avatar.svg') no-repeat;
+    background-size: 120px 120px;
+    border-radius: 50%;
+  }
+
+  .update-input-wrapper {
+    display: flex;
+    flex-direction: column;
+    min-width: 400px;
+    margin: 10px 0 0;
+
+    @media screen and (max-width: $mobile-width) {
+      min-width: 0;
+    }
+
+    input {
+      width: 100%;
+      padding: 0 10px;
+
+      @media screen and (max-width: $mobile-width) {
+        width: 80vw;
+        margin: 0;
+      }
+    }
+
+    label {
+      margin-top: 20px;
+      color: $black;
+    }
+  }
+
+  .has-error {
+    input {
+      margin-bottom: 0;
+      border: 1px solid $alizarin-crimson;
+      outline: 0;
+      box-sizing: border-box;
+
+    }
+
+    .help-block {
+      display: block;
+      font-size: 12px;
+      font-weight: 400;
+      color: $alizarin-crimson;
+    }
+   }
+
+  label {
+    margin-top: 20px;
+    color: $black;
+  }
+
+  .update-profile-btn {
+    margin-top: 10px;
+    font-weight: 600;
+    text-transform: uppercase;
+
+    &:active {
+      color: $white;
+      background: $alizarin-crimson;
+    }
+
+    @media screen and (max-width: $mobile-width) {
+      width: 80vw;
+      margin-top: 20px;
+    }
+  }
+}
